@@ -20,16 +20,16 @@ public class TestArray2 {
 	 * Compte du nombre de doublon dans un tableau
 	 */
 	static void doublon() {
-		int doublon[] = new int[array.length / 2];
-		int cpt = 0;
+		int doublon[] = new int[array.length / 2];	//il ne peut pas y avoir plus de la moitié des éléments comme doublon
+		int cpt = 0;								// cpt correspond aux nombres de doublon trouvé
 
-		for (int i = 0; i < array.length - 1; i++) {
+		for (int i = 0; i < array.length - 1; i++) {	//Pour chaque valeur du tableau on va vérifier s'il existe un doublon
 			for (int j = i + 1; j < array.length; j++) {
-				if (array[i] == array[j]) {
-					if (cpt > 0) {
+				if (array[i] == array[j]) {				//commpare les valeur du tableau
+					if (cpt > 0) {						//vérifie si le tableau contient au moins un doublon
 						for (int k = 0; k < cpt; k++) {
-							if (array[i] == doublon[k]) {
-								break;
+							if (array[i] == doublon[k]) {	//vérifie si le doublon existe déjà dans le tableau de doublon
+								break;						//dans ce cas on n'incremente pas le compteur de doublon
 							}
 							if (cpt - 1 == k) {
 								doublon[cpt] = array[i];

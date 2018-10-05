@@ -31,25 +31,25 @@ public class TestArray2 {
 							if (array[i] == doublon[k]) {	//vérifie si le doublon existe déjà dans le tableau de doublon
 								break;						//dans ce cas on n'incremente pas le compteur de doublon
 							}
-							if (cpt - 1 == k) {
-								doublon[cpt] = array[i];
-								cpt++;
+							if (cpt - 1 == k) {			
+								doublon[cpt] = array[i];	//ajouter le nouveau doublon au tableau
+								cpt++;						//incrementer le compteur de doublon
 							}
 						}
 					} else {
-						doublon[cpt] = array[i];
-						cpt++;
+						doublon[cpt] = array[i];			//ajouter le nouveau doublon au tableau
+						cpt++;								//incrementer le compteur de doublon
 					}
 				}
 			}
 		}
-		System.out.println(cpt);
+		System.out.println("il y a "+cpt+" valeur(s) qui a/ont au moins un doublon dans le tableau"); //affichage du résultat
 	}
 
 	public static void main(String[] args) {
 		// moy(array);
 		// l'entié 15 a pour index 1
-		// doublon();
+		doublon();
 	}
 
 }
